@@ -8,16 +8,16 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header class="navbar">
+    <header class="navbar" id="navbar" role="navigation">
         <div class="nav-content">
             <div class="logo-container">
-                <span class="logo-name">
+                <a href="index.html"><span class="logo-name">
                     <i class="fa-solid fa-code"></i>
-                    Coding Journey
-                </span>
+                    Coding 
+                </span>Journey</a>
             </div>
-           
-            <nav class="nav-links">
+
+            <nav class="nav-links" id="nav-links">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">Blog</a></li>
@@ -29,6 +29,13 @@
                 <input type="text" placeholder="Search...">
                <i class="fa-solid fa-magnifying-glass"></i>
         </div>
+        <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        </div>
     </header>
+    <script src="script.js"></script>
 </body>
 </html>
