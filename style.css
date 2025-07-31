@@ -29,7 +29,7 @@ body.dark-mode {
     align-items: center;
     gap: 15px;
     list-style-type: none;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .nav-links a{
@@ -190,6 +190,8 @@ input:focus{
 .hero-img img{
   width:100%;
   height: 400px;
+  
+
 }
 .hero{
   text-align: center;
@@ -217,16 +219,28 @@ input:focus{
 }
 .hero-btn a{
   text-decoration: none;
-  color: rgb(9, 9, 9);
+  color: #e7e7e7;
   
 }
-.hero-btn{
-  
+.hero-btn {
+  text-align: center;
+  margin: 20px;
+}
 
- margin: 30px;
-  
-  
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #21374f;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
 }
+
+.btn:hover {
+  background: #99abbe;
+}
+
 /* Shared Sidebar Styles */
 .sidebar {
   display: flex;
