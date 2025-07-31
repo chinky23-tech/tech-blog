@@ -13,8 +13,8 @@
             <div class="logo-container">
                 <a href="index.html"><span class="logo-name">
                     <i class="fa-solid fa-code"></i>
-                    Coding 
-                </span>Journey</a>
+                    Coding Journey
+                </span></a>
             </div>
 
             <nav class="nav-links" id="nav-links">
@@ -24,18 +24,126 @@
                     <li><a href="#blog">Contact</a></li>
                     <li><a href="#contact">About</a></li>
                 </ul>
+            
             </nav>
-            <div class="search-bar">
-                <input type="text" placeholder="Search...">
-               <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
+         
         <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
             <span></span>
             <span></span>
             <span></span>
         </div>
+           
+               <div class="search-bar">
+                <input type="text" placeholder="Search...">
+               <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+        </div>
         </div>
     </header>
+   <main class="main-container">
+  <!-- Left Sidebar -->
+  <aside class="sidebar left-sidebar">
+    <div class="sidebar-widget">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="#">JavaScript</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">HTML</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <section class="main-content">
+    <section class="hero" id="hero">
+      <h1>Welcome to My Coding Journey</h1>
+      <p>Join me as I explore the world of programming, share my experiences, and learn new skills.</p>
+      <div class="hero-img">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Author" class="author-img">
+      </div>
+      <div class="hero-btn">
+      <a href="#blog" class="btn">Read My Blog</a>
+      </div>
+    </section>
+
+    <section class="blog-posts">
+      <h2>Latest Articles</h2>
+      <div class="posts-grid" id="posts-container">
+        <!-- JS Loaded Posts -->
+      </div>
+      <button id="load-more" class="btn">Load More</button>
+    </section>
+  </section>
+
+  <!-- Right Sidebar -->
+  <aside class="sidebar right-sidebar">
+    <div class="sidebar-widget">
+      <h3>About Me</h3>
+      
+      <p>Hi, I'm Alex. I write about web development...</p>
+    </div>
+
+    <div class="sidebar-widget">
+      <h3>Subscribe</h3>
+      <form id="subscribe-form">
+        <input type="email" placeholder="Your email" required>
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
+    </div>
+  </aside>
+</main>
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Tech Insights</h3>
+                    <p>Bringing you the latest in web development and technology trends.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Tech Insights. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Post Modal -->
+    <div class="modal" id="post-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-post-content"></div>
+            <div class="comments-section">
+                <h3>Comments</h3>
+                <div id="comments-container"></div>
+                <form id="comment-form">
+                    <textarea placeholder="Add your comment..." required></textarea>
+                    <button type="submit" class="btn">Post Comment</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+  
     <script src="script.js"></script>
 </body>
 </html>
