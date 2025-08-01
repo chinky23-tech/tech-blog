@@ -54,7 +54,30 @@
         <li><a href="#">HTML</a></li>
       </ul>
     </div>
+     <div class="sidebar-widget quote-widget">
+  <h3>Tip of the Day</h3>
+  <p id="daily-tip">
+    Loading tip...
+  </p>
+</div>
+<div class="sidebar-widget fact-widget">
+  <h3>Did You Know?</h3>
+  <p id="tech-fact">Loading...</p>
+</div>
+<div class="sidebar-widget poll-widget">
+  <h3>Quick Poll</h3>
+  <p>Which one do you prefer?</p>
+  <form id="poll-form">
+    <label><input type="radio" name="poll" value="html"> HTML</label><br>
+    <label><input type="radio" name="poll" value="css"> CSS</label><br>
+    <label><input type="radio" name="poll" value="js"> JavaScript</label><br>
+    <button type="button" onclick="submitPoll()">Vote</button>
+  </form>
+  <p id="poll-result"></p>
+</div>
+
   </aside>
+
 
   <!-- Main Content -->
   <section class="main-content">
@@ -94,6 +117,7 @@
       </form>
     </div>
   </aside>
+ 
 </main>
 
 
