@@ -102,3 +102,5 @@ function submitPoll() {
     document.getElementById("poll-result").innerText = "Please select an option.";
   }
 }
+
+
