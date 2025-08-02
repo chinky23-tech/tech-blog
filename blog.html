@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding Journey Blog</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -32,7 +33,6 @@
             <span></span>
             <span></span>
         </div>
-           
                <div class="search-bar">
                 <input type="text" placeholder="Search...">
                <i class="fa-solid fa-magnifying-glass"></i>
@@ -43,7 +43,7 @@
         </div>
         </div>
     </header>
-   <main class="main-container">
+    <main class="main-container">
   <!-- Left Sidebar -->
   <aside class="sidebar left-sidebar">
     <div class="sidebar-widget">
@@ -80,33 +80,36 @@
   </aside>
 
 
-  <!-- Main Content -->
-  <section class="main-content">
-    <section class="hero" id="hero">
-      <h1>Welcome to My Coding Journey</h1>
-      <p>Join me as I explore the world of programming, share my experiences, and learn new skills.</p>
-      <div class="hero-img">
-      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Author" class="author-img">
-      </div>
-      <div class="hero-btn">
-      <a href="blog.html" class="btn">Read My Blog</a>
-      </div>
+   <!--Main Content-->
+     <section class="hero-blog">
+        <div class="container-blog">
+            <h1>My Coding Journey</h1>
+            <p>Sharing insights, challenges, and triumphs as I learn HTML, CSS, and JavaScript</p>
+        </div>
     </section>
+    
+   <main class="container-blog">
+        <section class="categories">
+            <h2>Filter by Category</h2>
+            <div class="category-filter">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="html">HTML</button>
+                <button class="category-btn" data-category="css">CSS</button>
+                <button class="category-btn" data-category="js">JavaScript</button>
+                <button class="category-btn" data-category="projects">Projects</button>
+            </div>
+        </section>
+        
+        <section class="blog-posts" id="blogPosts">
+            <!-- Posts will be loaded dynamically with JavaScript -->
+        </section>
+    </main>
 
-    <!--<section class="blog-posts">
-      <h2>Latest Articles</h2>
-      <div class="posts-grid" id="posts-container">
-         JS Loaded Posts 
-      </div>
-      <button id="load-more" class="btn">Load More</button>
-    </section>-->
-    <section class="blog-posts">
-  <h2>Latest Articles</h2>
-  <div class="posts-grid" id="posts-container"></div>
-  <button id="load-more" class="btn">Load More</button>
-</section>
 
-  </section>
+  
+ 
+
+  
 
   <!-- Right Sidebar -->
   <aside class="sidebar right-sidebar">
