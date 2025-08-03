@@ -1,0 +1,79 @@
+.post-header {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #e1e4e8;
+            text-align: center;
+        }
+        
+        .post-title {
+            font-size: 2.5rem;
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+        }
+.post-meta {
+            display: flex;
+            gap: 1rem;
+            color: #4a5568;
+            margin-bottom: 1rem;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .post-category {
+            background-color: #e53e3e;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+.post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1rem 3rem;
+            line-height: 1.7;
+            color: #2d3748;
+        }
+        
+        .post-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+.code-block {
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 1rem;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        .tips-section, .challenges-section {
+            background-color: #f7fafc;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-left: 4px solid #4299e1;
+        }
+.tips-section h3, .challenges-section h3 {
+            margin-top: 0;
+            color: #2b6cb0;
+        }
+        
+        .back-to-blog {
+            display: inline-block;
+            margin-top: 2rem;
+            color: #4299e1;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .back-to-blog:hover {
+            text-decoration: underline;
+        }

@@ -1,0 +1,131 @@
+/* blog.css */
+
+/* Hero section unique to blog.html */
+.hero-blog {
+  background: linear-gradient(135deg, #1e293b, #2d3748);
+  color: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero-blog h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.hero-blog p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #cbd5e1;
+}
+
+
+
+
+
+
+
+.container-blog {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
+
+/* Main Blog Content */
+main.container-blog {
+    padding: 2rem 0;
+    position: relative;
+}
+
+/* Categories Section */
+.categories {
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+.categories h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #2d3748;
+}
+
+.category-filter {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.category-btn {
+    padding: 0.5rem 1.25rem;
+    background-color: white;
+    border: 1px solid #d1d5db;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    color: #4b5563;
+}
+
+.category-btn:hover {
+    background-color: #f3f4f6;
+    border-color: #9ca3af;
+}
+
+.category-btn.active {
+    background-color: #1e293b;
+    color: white;
+    border-color: #2d3748;
+}
+
+/* Blog Posts Grid */
+.blog-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-blog {
+        padding: 3rem 0;
+    }
+    
+    .hero-blog h1 {
+        font-size: 2.25rem;
+    }
+    
+    .hero-blog p {
+        font-size: 1.1rem;
+    }
+    
+    .category-filter {
+        gap: 0.5rem;
+    }
+    
+    .category-btn {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-posts {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-blog h1 {
+        font-size: 2rem;
+    }
+}
