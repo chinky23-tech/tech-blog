@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First HTML Page - CodeJourney</title>
+    <link rel="stylesheet" href="css/style.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+     <link rel="stylesheet" href="css/content2.css">
+    
+    </head>
+<body>
+    <header class="navbar" id="navbar" role="navigation">
+        <div class="nav-content">
+            <div class="logo-container">
+                <a href="index.html"><span class="logo-name">
+                    <i class="fa-solid fa-code"></i>
+                    Tech Insights
+                </span></a>
+            </div>
+
+            <nav class="nav-links" id="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            
+            </nav>
+         
+        <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+           
+               <div class="search-bar">
+                <input type="text" placeholder="Search...">
+               <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+        </div>
+        </div>
+    </header>
+  <div class="post-header">
+        <div class="container">
+            <h1 class="post-title">CSS Flexbox Magic</h1>
+            <div class="post-meta">
+                <span class="post-category">CSS</span>
+                <span class="post-date">May 15, 2024</span>
+            </div>
+        </div>
+    </div>
+<article class="post-content">
+    <p>Flexbox revolutionized how I create layouts - goodbye float nightmares, hello intuitive alignment! Here's my journey from struggling with positioning to mastering this game-changing CSS module.</p>
+
+    <!-- Hero Image -->
+    <div class="image-comparison">
+        <img src="images/messyflexboxlayout.png" alt="Messy layout using floats">
+        <img src="images/cleanflexboxlayout.png" alt="Clean Flexbox layout">
+        <figcaption>Left: My old float layout | Right: Same content with Flexbox</figcaption>
+    </div>
+
+    <h3>The Before Times</h3>
+    <p>My early attempts with floats and clearfix hacks:</p>
+    
+    <div class="code-block">
+        <pre><code>/* The old way */
+     .container {
+    overflow: hidden; /* Clearfix hack */
+ }
+     .box {
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+}
+.box:last-child {
+    margin-right: 0;
+}
+</code></pre>
+    </div>
+
+    <h3>Flexbox Enlightenment</h3>
+    <p>The moment I discovered these core properties:</p>
+    
+    <div class="flexbox-visual">
+        <img src="images/flexbox-axis-diagram.png" alt="Flexbox main/cross axis diagram" class="illustration">
+        <ul class="property-list">
+            <li><strong>display: flex</strong> - The magic incantation</li>
+            <li><strong>justify-content</strong> - Main axis alignment</li>
+            <li><strong>align-items</strong> - Cross axis alignment</li>
+            <li><strong>flex-direction</strong> - Row/column flow</li>
+            <li><strong>flex-grow/shrink</strong> - Responsive control</li>
+        </ul>
+    </div>
+
+    <h3>My First Flexbox Layout</h3>
+    <div class="code-block">
+        <pre><code>.card-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card {
+    flex: 1 1 300px; /* Grow | Shrink | Basis */
+}</code></pre>
+    </div>
+    <img src="images/first-flexbox-result.jpg" alt="Browser view of first Flexbox layout">
+
+    <div class="tips-section">
+        <h4>Pro Tips I Learned</h4>
+        <ul>
+            <li>Use <code>gap</code> instead of margins between items</li>
+            <li><code>flex: 1</code> is shorthand for equal distribution</li>
+            <li>Combine with <code>min-width</code> for responsive grids</li>
+            <li>Remember <code>align-self</code> for individual items</li>
+        </ul>
+    </div>
+
+    <div class="challenges-section">
+        <h4>Stumbling Blocks</h4>
+        <ul>
+            <li>Forgetting to set parent container as flex</li>
+            <li>Confusing main vs cross axis alignment</li>
+            <li>Overusing fixed widths that break flexibility</li>
+            <li>Browser prefix requirements for older sites</li>
+        </ul>
+    </div>
+
+    <h3>Flexbox in Action</h3>
+    <p>Here's a real project where Flexbox saved me hours:</p>
+    <div class="gallery">
+        <img src="images/flexbox-navbar.jpg" alt="Navigation bar using Flexbox">
+        <img src="images/flexbox-card-grid.jpg" alt="Card grid layout">
+        <img src="images/flexbox-form.jpg" alt="Flexbox form layout">
+    </div>
+
+    <div class="resources-section">
+        <h4>Essential Flexbox Resources</h4>
+        <ul>
+            <li><a href="https://flexboxfroggy.com/" target="_blank">Flexbox Froggy (game)</a></li>
+            <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">CSS-Tricks Complete Guide</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout" target="_blank">MDN Documentation</a></li>
+        </ul>
+    </div>
+
+    <a href="blog.html" class="back-to-blog">← Back to Blog</a>
+</article>
+</body>
+</html>

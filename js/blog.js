@@ -8,7 +8,7 @@
                     category: "html",
                     date: "May 15, 2024",
                     image: "https://source.unsplash.com/random/600x400/?html",
-                    content: "full-content-1.html"
+                    content: "content1.html"
                 },                {
                     id: 2,
                     title: "CSS Flexbox Magic",
