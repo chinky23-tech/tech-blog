@@ -72,15 +72,15 @@
         <pre><code>/* The old way */
      .container {
     overflow: hidden; /* Clearfix hack */
- }
+      }
      .box {
     float: left;
     width: 30%;
     margin-right: 5%;
-}
-.box:last-child {
+      }
+     .box:last-child {
     margin-right: 0;
-}
+     }
 </code></pre>
     </div>
 
@@ -88,7 +88,7 @@
     <p>The moment I discovered these core properties:</p>
     
     <div class="flexbox-visual">
-        <img src="images/flexbox-axis-diagram.png" alt="Flexbox main/cross axis diagram" class="illustration">
+        <img src="images/flexboxdaigram.png" alt="Flexbox main/cross axis diagram" class="illustration">
         <ul class="property-list">
             <li><strong>display: flex</strong> - The magic incantation</li>
             <li><strong>justify-content</strong> - Main axis alignment</li>
@@ -135,9 +135,9 @@
     <h3>Flexbox in Action</h3>
     <p>Here's a real project where Flexbox saved me hours:</p>
     <div class="gallery">
-        <img src="images/flexbox-navbar.jpg" alt="Navigation bar using Flexbox">
-        <img src="images/flexbox-card-grid.jpg" alt="Card grid layout">
-        <img src="images/flexbox-form.jpg" alt="Flexbox form layout">
+        <img src="images/flexboxnav.png" alt="Navigation bar using Flexbox">
+        <img src="images/cardgrid.png" alt="Card grid layout">
+        <img src="images/flexbox-form.png" class="flex" alt="Flexbox form layout">
     </div>
 
     <div class="resources-section">
@@ -151,5 +151,53 @@
 
     <a href="blog.html" class="back-to-blog">← Back to Blog</a>
 </article>
+       <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Tech Insights</h3>
+                    <p>Bringing you the latest in web development and technology trends.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Tech Insights. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Post Modal -->
+    <div class="modal" id="post-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-post-content"></div>
+            <div class="comments-section">
+                <h3>Comments</h3>
+                <div id="comments-container"></div>
+                <form id="comment-form">
+                    <textarea placeholder="Add your comment..." required></textarea>
+                    <button type="submit" class="btn">Post Comment</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -16,7 +16,7 @@
                     category: "css",
                     date: "June 2, 2024",
                     image: "https://source.unsplash.com/random/600x400/?css",
-                    content: "full-content-2.html"
+                    content: "content2.html"
                 },{
                     id: 3,
                     title: "JavaScript Event Listeners",
@@ -24,16 +24,16 @@
                     category: "js",
                     date: "June 18, 2024",
                     image: "https://source.unsplash.com/random/600x400/?javascript",
-                    content: "full-content-3.html"
+                    content: "content3.html"
                 },
                 {
                     id: 4,
                     title: "Building My First Project",
                     excerpt: "The journey of planning, coding, and deploying my first complete web project.",
-category: "projects",
+                    category: "projects",
                     date: "July 5, 2024",
                     image: "https://source.unsplash.com/random/600x400/?webdevelopment",
-                    content: "full-content-4.html"
+                    content: "content4.html"
                 },
                 {
                     id: 5,
@@ -42,7 +42,7 @@ category: "projects",
                     category: "css",
                     date: "July 22, 2024",
                     image: "https://source.unsplash.com/random/600x400/?webdesign",
-                    content: "full-content-5.html"
+                    content: "content5.html"
                 },
 {
                     id: 6,
@@ -51,10 +51,10 @@ category: "projects",
                     category: "js",
                     date: "August 10, 2024",
                     image: "https://source.unsplash.com/random/600x400/?code",
-                    content: "full-content-6.html"
+                    content: "content6.html"
                 }
             ];
-// Function to render blog posts
+             // Function to render blog posts
             function renderPosts(posts) {
                 const blogPostsContainer = document.getElementById('blogPosts');
                 blogPostsContainer.innerHTML = '';
@@ -69,7 +69,7 @@ category: "projects",
                     postElement.className = `post-card ${post.category}`;
                     postElement.innerHTML = `
                         <div class="post-image" style="background-image: url('${post.image}')"></div>
-<div class="post-content">
+                         <div class="post-content">
                             <h2>${post.title}</h2>
                             <div class="post-meta">
                                 <span>${post.category.toUpperCase()}</span>
@@ -83,7 +83,7 @@ category: "projects",
                 });
             }
             
-// Initial render of all posts
+            // Initial render of all posts
             renderPosts(blogPosts);
             
             // Category filtering
