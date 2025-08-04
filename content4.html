@@ -50,103 +50,124 @@
         <div class="container">
             <h1 class="post-title">My First Frontend Project</h1>
             <div class="post-meta">
-                <span class="post-category">PROJECTS</span>
+                <span class="post-category">PROJECT</span>
                 <span class="post-date">July 5, 2024</span>
             </div>
         </div>
     </div>
-        <article class="post-content container">
-        <p class="intro">After mastering HTML, CSS, and JavaScript basics, I built my first complete frontend project - a fully responsive interactive weather dashboard. Here's how I did it using only client-side technologies.</p>
+<article class="post-content container">
+        <p class="intro">Toast notifications were my first real JavaScript project. These small popup messages taught me DOM manipulation, event listeners, and CSS animations - all fundamental frontend concepts.</p>
         
-        <div class="project-showcase">
-            <div class="project-description">
-                <h2>WeatherWise Dashboard</h2>
-                <p>A responsive weather application that:</p>
-                <ul>
-                    <li>Fetches data from a public weather API</li>
-                    <li>Saves search history in localStorage</li>
-                    <li>Features animated weather icons</li>
-                    <li>Works perfectly on all devices</li>
-                </ul>
-<a href="https://yourusername.github.io/weather-app" class="demo-button" target="_blank">Live Demo</a>
-                <a href="https://github.com/yourusername/weather-app" class="code-button" target="_blank">View Code</a>
-            </div>
-            <div class="project-screenshot">
-                <img src="images/weather-app-screenshot.jpg" alt="WeatherWise Dashboard Screenshot">
-            </div>
-        </div>
-        <h2>Key Features</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <h3>API Integration</h3>
-                <p>Used fetch() to get data from OpenWeatherMap API with async/await</p>
-            </div>
-            <div class="feature-card">
-                <h3>Dynamic UI</h3>
-                <p>DOM manipulation to update forecasts without page reload</p>
-            </div>
-            <div class="feature-card">
-                <h3>Local Storage</h3>
-                <p>Persisted search history between sessions</p>
-            </div>
-            <div class="feature-card">
-                <h3>Mobile First</h3>
-                <p>Designed for small screens then enhanced for desktop</p>
-            </div>
-        </div>
-<h2>Code Snippets</h2>
-        
-        <h3>Fetching Weather Data</h3>
-        <div class="code-highlight">
-            <pre><code>async function getWeatherData(city) {
-    const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=YOUR_API_KEY`
-    );
-    return await response.json();
-}</code></pre>
-        </div>
-<h3>LocalStorage Implementation</h3>
-        <div class="code-highlight">
-            <pre><code>// Save searched city
-function saveToHistory(city) {
-    let history = JSON.parse(localStorage.getItem('weatherHistory')) || [];
-    if (!history.includes(city)) {
-        history.push(city);
-        localStorage.setItem('weatherHistory', JSON.stringify(history));
-    }
-}</code></pre>
-        </div>
-        
-<h2>Deployment to GitHub Pages</h2>
-        <div class="deployment-steps">
-            <ol>
-                <li>Created new GitHub repository named "weather-app"</li>
-                <li>Initialized git locally: <code>git init</code></li>
-                <li>Added files and committed: <code>git add . && git commit -m "Initial commit"</code></li>
-                <li>Set remote: <code>git remote add origin https://github.com/yourusername/weather-app.git</code></li>
-                <li>Pushed code: <code>git push -u origin main</code></li>
-                <li>Enabled GitHub Pages in repository settings (Branch: main, Folder: /root)</li>
-            </ol>
-            <p>My site went live at: <strong>https://yourusername.github.io/weather-app</strong></p>
-        </div>
-        <h2>Lessons Learned</h2>
+        <h2>What Are Toast Notifications?</h2>
+        <p>Toast notifications are brief messages that appear temporarily to provide user feedback. They're commonly used for:</p>
         <ul>
-            <li><strong>API Keys</strong>: Learned to hide them from public repos (used a config.js file added to .gitignore)</li>
-            <li><strong>Error Handling</strong>: Added try/catch blocks for API calls</li>
-            <li><strong>Responsive Images</strong>: Used picture element with different sources</li>
-            <li><strong>Git Workflow</strong>: Made small, frequent commits with clear messages</li>
+            <li>Success/error messages</li>
+            <li>System notifications</li>
+            <li>Form submission feedback</li>
+            <li>Warning messages</li>
         </ul>
+        <div class="live-demo">
+            <h3>Try It Yourself</h3>
+            <p>Click the buttons to see different notification types:</p>
+            
+            <div class="demo-container">
+                <button type="button" class="btn" id="btn1">
+                    <i class="fas fa-check"></i> Success
+                </button>
+                <button type="button" class="btn" id="btn2">
+                    <i class="fas fa-times"></i> Error
+                </button>
+                <button type="button" class="btn" id="btn3">
+                    <i class="fas fa-info-circle"></i> Info
+                </button>
+                <button type="button" class="btn" id="btn4">
+                    <i class="fas fa-exclamation-triangle"></i> Warning
+                </button>
+            </div>
+        </div>
+         <h2>How It Works</h2>
+        
+        <div class="code-explanation">
+            <h3>HTML Structure</h3>
+            <p>The minimal HTML needed:</p>
+            <pre><code>&lt;div class="toast-overlay" id="toast-overlay"&gt;&lt;/div&gt;
+         &lt;button id="btn1"&gt;Success&lt;/button&gt;</code></pre>
+        </div>
+        
+        <div class="code-explanation">
+            <h3>CSS Styling</h3>
+            <p>Key styling for the toast:</p>
+            <pre><code>.toast-overlay {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    transform: translateY(50px);
+}
+.toast-show {
+    opacity: 1;
+    transform: translateY(0);
+}</code></pre>
+        </div>
+        
+        <div class="code-explanation">
+            <h3>JavaScript Logic</h3>
+            <p>The core functionality:</p>
+            <pre><code>function showToast(message, bgColor) {
+    const toast = document.getElementById('toast-overlay');
+    toast.textContent = message;
+    toast.style.backgroundColor = bgColor;
+    toast.classList.add('toast-show');
+    
+    setTimeout(() => {
+        toast.classList.remove('toast-show');
+    }, 3000);
+}
+document.getElementById('btn1').addEventListener('click', () => {
+    showToast('Success! Action completed', '#10b981');
+});</code></pre>
+        </div>
+        
+        <h2>What I Learned</h2>
+        <ul>
+            <li><strong>DOM Manipulation</strong>: Changing element styles and content with JavaScript</li>
+            <li><strong>Event Listeners</strong>: Responding to user interactions</li>
+            <li><strong>CSS Transitions</strong>: Creating smooth animations</li>
+            <li><strong>setTimeout</strong>: Controlling timing of operations</li>
+        </ul>
+<h2>Possible Improvements</h2>
+        <div class="improvements-list">
+            <div class="improvement-card">
+                <h4>Multiple Toasts</h4>
+                <p>Queue system to show multiple notifications without overlapping</p>
+            </div>
+            <div class="improvement-card">
+                <h4>Progress Bar</h4>
+                <p>Visual indicator showing time remaining before dismissal</p>
+            </div>
+            <div class="improvement-card">
+                <h4>Custom Icons</h4>
+                <p>Different icons for each notification type</p>
+            </div>
+            <div class="improvement-card">
+                <h4>Accessibility</h4>
+                <p>ARIA attributes for screen reader support</p>
+            </div>
+        </div>
         <div class="resources-section">
-            <h3>Helpful Resources</h3>
+            <h3>Project Links</h3>
             <ul>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" target="_blank">MDN Fetch API Docs</a></li>
-                <li><a href="https://openweathermap.org/api" target="_blank">OpenWeatherMap API</a></li>
-                <li><a href="https://pages.github.com/" target="_blank">GitHub Pages Guide</a></li>
+                <li><a href="https://chinky23-tech.github.io/Toast-notification/" target="_blank">Live Demo</a></li>
+                <li><a href="https://github.com/chinky23-tech/Toast-notification" target="_blank">GitHub Repository</a></li>
             </ul>
         </div>
         
         <a href="blog.html" class="back-to-blog">← Back to Blog</a>
+        
+        <div class="toast-overlay" id="toast-overlay"></div>
     </article>
+
 
 
            <footer>
@@ -195,7 +216,7 @@ function saveToHistory(city) {
         </div>
     </div>
 
-
+<script src="js/content4.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
