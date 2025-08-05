@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First HTML Page - CodeJourney</title>
+    <link rel="stylesheet" href="css/style.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+     <link rel="stylesheet" href="css/content5.css">
+    
+    </head>
+<body>
+    <header class="navbar" id="navbar" role="navigation">
+        <div class="nav-content">
+            <div class="logo-container">
+                <a href="index.html"><span class="logo-name">
+                    <i class="fa-solid fa-code"></i>
+                    Tech Insights
+                </span></a>
+            </div>
+
+            <nav class="nav-links" id="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            
+            </nav>
+         
+        <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+           
+               <div class="search-bar">
+                <input type="text" placeholder="Search...">
+               <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+        </div>
+        </div>
+    </header>
+        <div class="post-header grid-flex-header">
+        <div class="container">
+            <h1 class="post-title">CSS Grid vs Flexbox</h1>
+            <div class="post-meta">
+                <span class="post-category">CSS</span>
+                <span class="post-date">July 22, 2024</span>
+            </div>
+        </div>
+    </div>
+<article class="post-content container">
+        <p class="intro">After mastering both CSS Grid and Flexbox, I've learned they're not competitors but complementary tools. Here's my guide to choosing the right layout method for different scenarios.</p>
+        
+        <div class="comparison-hero">
+            <div class="hero-card">
+                <h2><i class="fas fa-th-large"></i> CSS Grid</h2>
+                <p><strong>Two-dimensional</strong> layout system (rows AND columns)</p>
+                <ul>
+                    <li>Perfect for overall page structure</li>
+                    <li>Explicit control over both dimensions</li>
+                    <li>Gap control without margins</li>
+                    <li>Template areas for visual layout</li>
+                </ul>
+            </div>
+<div class="hero-card">
+                <h2><i class="fas fa-align-justify"></i> Flexbox</h2>
+                <p><strong>One-dimensional</strong> layout system (rows OR columns)</p>
+                <ul>
+                    <li>Ideal for component layouts</li>
+                    <li>Content-driven flow</li>
+                    <li>Space distribution along one axis</li>
+                    <li>Alignment superpowers</li>
+                </ul>
+            </div>
+        </div>
+        
+<h2>When to Use Each</h2>
+        
+        <div class="use-case">
+            <h3><i class="fas fa-check-circle" style="color: #8b5cf6;"></i> Use CSS Grid When:</h3>
+            <ul>
+                <li>You need complex 2D layouts (both rows and columns)</li>
+                <li>You want precise control over spacing and alignment</li>
+                <li>You're creating the overall page structure</li>
+                <li>You need overlapping elements</li>
+            </ul>
+        </div>
+        
+<div class="use-case">
+            <h3><i class="fas fa-check-circle" style="color: #8b5cf6;"></i> Use Flexbox When:</h3>
+            <ul>
+                <li>You're laying out items in a single direction</li>
+                <li>You need dynamic content sizing</li>
+                <li>You're working with navigation menus or toolbars</li>
+                <li>You need to align items within a container</li>
+            </ul>
+        </div>
+<h2>Visual Comparison</h2>
+        
+        <div class="visual-comparison">
+            <div class="visual-example">
+                <h3>Flexbox Layout</h3>
+                <div class="demo-flex">
+                    <div>Item 1</div>
+                    <div>Item 2</div>
+                    <div>Item 3</div>
+                </div>
+                <p>Items flow in one direction with flexible sizing</p>
+            </div>
+<div class="visual-example">
+                <h3>Grid Layout</h3>
+                <div class="demo-grid">
+                    <div>Header</div>
+                    <div>Header</div>
+                    <div>Header</div>
+                    <div>Sidebar</div>
+                    <div>Main</div>
+                    <div>Main</div>
+                    <div>Footer</div>
+                    <div>Footer</div>
+                    <div>Footer</div>
+                </div>
+                <p>Explicit rows and columns create a 2D structure</p>
+            </div>
+        </div>
+        
+        <h2>Code Comparison</h2>
+        
+        <div class="code-comparison">
+            <div class="code-block">
+                <h3>Flexbox Example</h3>
+                <pre><code>.container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    flex: 1 1 200px;
+}</code></pre>
+            </div>
+<div class="code-block">
+                <h3>Grid Example</h3>
+                <pre><code>.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 1rem;
+    grid-template-areas:
+        "header header header"
+        "sidebar main main"
+        "footer footer footer";
+}</code></pre>
+            </div>
+        </div>
+        
+        <h2>Decision Flowchart</h2>
+<div class="decision-chart">
+            <p><strong>Ask yourself:</strong></p>
+            <ol>
+                <li>Do I need to control both rows AND columns? → Grid</li>
+                <li>Is my layout primarily linear in one direction? → Flexbox</li>
+                <li>Do I need content to dictate the flow? → Flexbox</li>
+                <li>Do I need precise placement control? → Grid</li>
+                <li>Still unsure? → You can use both together!</li>
+            </ol>
+        </div>
+        <h2>Combining Grid and Flexbox</h2>
+        
+        <div class="combined-example">
+            <p>The real power comes when you combine both technologies:</p>
+            
+            <div class="demo-combined">
+                <div class="sidebar">
+                    <p>Sidebar (Grid Item)</p>
+                </div>
+                <div class="content-area">
+                    <div>Card 1 (Flex Item)</div>
+                    <div>Card 2 (Flex Item)</div>
+                    <div>Card 3 (Flex Item)</div>
+                    <div>Card 4 (Flex Item)</div>
+                </div>
+            </div>
+<div class="code-block" style="margin-top: 1rem;">
+                <pre><code>/* Grid for overall layout */
+.page {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+}
+
+/* Flexbox for internal components */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card {
+    flex: 1 1 200px;
+}</code></pre>
+</div>
+        </div>
+        
+        <div class="resources-section">
+            <h3>Further Learning</h3>
+            <ul>
+                <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">CSS-Tricks Flexbox Guide</a></li>
+                <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">CSS-Tricks Grid Guide</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids" target="_blank">MDN Grid Documentation</a></li>
+            </ul>
+        </div>
+        
+        <a href="blog.html" class="back-to-blog">← Back to Blog</a>
+    </article>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Tech Insights</h3>
+                    <p>Bringing you the latest in web development and technology trends.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Tech Insights. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Post Modal -->
+    <div class="modal" id="post-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-post-content"></div>
+            <div class="comments-section">
+                <h3>Comments</h3>
+                <div id="comments-container"></div>
+                <form id="comment-form">
+                    <textarea placeholder="Add your comment..." required></textarea>
+                    <button type="submit" class="btn">Post Comment</button>
+                </form>
+            </div>
+        </div>
+    </div>
+<script src="js/script.js"></script>
+</body>
+</html>

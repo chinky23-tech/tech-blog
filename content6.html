@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First HTML Page - CodeJourney</title>
+    <link rel="stylesheet" href="css/style.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+       <link rel="stylesheet" href="css/content6.css">
+    
+    </head>
+   <body>
+    <header class="navbar" id="navbar" role="navigation">
+        <div class="nav-content">
+            <div class="logo-container">
+                <a href="index.html"><span class="logo-name">
+                    <i class="fa-solid fa-code"></i>
+                    Tech Insights
+                </span></a>
+            </div>
+
+            <nav class="nav-links" id="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            
+            </nav>
+         
+        <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+           
+               <div class="search-bar">
+                <input type="text" placeholder="Search...">
+               <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+        </div>
+        </div>
+    </header>
+
+        <div class="post-header dom-header">
+        <div class="container">
+            <h1 class="post-title">DOM Manipulation Basics</h1>
+            <div class="post-meta">
+                <span class="post-category">JAVASCRIPT</span>
+                <span class="post-date">August 10, 2024</span>
+            </div>
+        </div>
+    </div>
+<article class="post-content container">
+        <p class="intro">The Document Object Model (DOM) is the programming interface for web documents. Learning to manipulate it with JavaScript was my gateway to creating dynamic, interactive web pages. Here's what I discovered.</p>
+        
+        <h2>What is the DOM?</h2>
+        <p>The DOM is a tree-like representation of your webpage that JavaScript can interact with. When the browser loads your page, it creates this structure that we can modify.</p>
+        
+        <div class="dom-demo">
+            <h3>DOM Tree Visualization</h3>
+            <img src="images/dom-tree.png" alt="DOM Tree Structure" style="width:100%; max-width:600px; display:block; margin:1rem auto;">
+            <p>Every element, attribute, and piece of text becomes a node in this tree that we can access and modify.</p>
+        </div>
+        
+<h2>Basic DOM Manipulation Methods</h2>
+        
+        <div class="method-card">
+            <h3>Selecting Elements</h3>
+            <div class="code-example">
+                <pre><code>// Select single element
+const header = document.querySelector('header');
+// Select multiple elements
+const buttons = document.querySelectorAll('.btn');
+
+// Older methods (still useful)
+const byId = document.getElementById('main');
+const byClass = document.getElementsByClassName('item');
+const byTag = document.getElementsByTagName('div');</code></pre>
+            </div>
+        </div>
+        <div class="method-card">
+            <h3>Modifying Elements</h3>
+            <div class="code-example">
+                <pre><code>// Change content
+element.textContent = 'New text';
+element.innerHTML = '&lt;strong&gt;Bold text&lt;/strong&gt;';
+
+// Change attributes
+element.setAttribute('id', 'newId');
+element.classList.add('active');
+element.style.color = 'blue';</code></pre>
+            </div>
+        </div>
+<h2>Interactive DOM Playground</h2>
+        
+        <div class="interactive-area">
+            <p>Try these DOM manipulation techniques on the element below:</p>
+            
+            <div id="elementDemo">This is a demo element</div>
+            
+            <div class="dom-buttons">
+                <button class="dom-btn" id="changeText">Change Text</button>
+                <button class="dom-btn" id="changeColor">Change Color</button>
+                <button class="dom-btn" id="addClass">Add Class</button>
+                <button class="dom-btn" id="toggleVisibility">Toggle Visibility</button>
+                <button class="dom-btn" id="resetAll">Reset All</button>
+            </div>
+<div class="code-example" id="actionCode" style="background:#f3e8ff; padding:1rem; border-radius:4px;">
+                // Click buttons to see the JavaScript code
+            </div>
+        </div>
+        
+        <h2>Creating and Removing Elements</h2>
+        
+        <table class="dom-table">
+            <thead>
+                <tr>
+                    <th>Action</th>
+                    <th>Method</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+               <tr>
+                    <td>Create Element</td>
+                    <td><code>document.createElement()</code></td>
+                    <td><code>const div = document.createElement('div');</code></td>
+                </tr>
+                <tr>
+                    <td>Add to DOM</td>
+                    <td><code>appendChild()</code> or <code>insertBefore()</code></td>
+                    <td><code>parent.appendChild(div);</code></td>
+                </tr>
+                <tr>
+                    <td>Remove Element</td>
+                    <td><code>remove()</code> or <code>removeChild()</code></td>
+                    <td><code>element.remove();</code></td>
+                </tr>
+                <tr>
+                    <td>Clone Element</td>
+                    <td><code>cloneNode()</code></td>
+                    <td><code>const newElement = element.cloneNode(true);</code></td>
+                </tr>
+            </tbody>
+</table>
+        
+        <h2>Event Listeners</h2>
+        <p>The real power comes when you combine DOM manipulation with event listeners:</p>
+                <div class="method-card">
+        <div class="code-example">
+            <pre><code>const button = document.querySelector('#myButton');
+
+         button.addEventListener('click', function() {
+           // DOM manipulation here
+           const newItem = document.createElement('li');
+             newItem.textContent = 'New item added!';
+             document.querySelector('ul').appendChild(newItem);
+           });</code></pre>
+        </div>
+        </div>
+<div class="resources-section">
+            <h3>DOM Cheat Sheet</h3>
+            <ul>
+                <li><code>element.textContent</code> - Get/set text content</li>
+                <li><code>element.innerHTML</code> - Get/set HTML content</li>
+                <li><code>element.getAttribute()</code> - Get attribute value</li>
+                <li><code>element.setAttribute()</code> - Set attribute value</li>
+                <li><code>element.classList</code> - Add/remove/toggle classes</li>
+                <li><code>element.style</code> - Modify CSS styles</li>
+            </ul>
+        </div>
+        
+        <a href="blog.html" class="back-to-blog">← Back to Blog</a>
+    </article>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Tech Insights</h3>
+                    <p>Bringing you the latest in web development and technology trends.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Tech Insights. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Post Modal -->
+    <div class="modal" id="post-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-post-content"></div>
+            <div class="comments-section">
+                <h3>Comments</h3>
+                <div id="comments-container"></div>
+                <form id="comment-form">
+                    <textarea placeholder="Add your comment..." required></textarea>
+                    <button type="submit" class="btn">Post Comment</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </body>
+    </html>

@@ -1,6 +1,6 @@
         .post-header.project-header {
             background: linear-gradient(135deg, #fb6db6 0%, #ed8282 100%);
-            padding: 4rem 0;
+            padding: 5rem 0;
             margin-bottom: 2rem;
            
             border-bottom: 1px solid #e1e4e8;
@@ -31,13 +31,15 @@
         .post-date{
             color: #10141a;
         }
-       .post-content {
+       .post-content  {
             max-width: 800px;
             margin: 0 auto;
             padding: 0 1rem 3rem;
             line-height: 1.7;
             color: #1b212b;
+
         }
+       
         .live-demo {
             text-align: center;
             margin: 3rem 0;
@@ -115,11 +117,24 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
-       
+       .resources-section{
+           background-image: linear-gradient(180deg, rgb(232, 92, 218), rgb(152, 172, 227));
+    padding: 1.8rem;
+    border-radius: 8px;
+    margin: 3rem 0;
+       }
+       .resources-section h3{
+        color: #ffffff;
+       }
         .resources-section a{
-        color: #1e293b;
+        color: #ffffff;
+        text-decoration: none;
       
         }
+     .resources-section a:hover{
+                    text-decoration: underline;
+                    color: #1e293b;
+                }
         .resources-section li{
             list-style-type: none;
 
