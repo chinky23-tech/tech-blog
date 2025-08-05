@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:serif;
     
 }
 body.dark-mode {
@@ -56,8 +56,8 @@ body.dark-mode {
 .search-bar input{
     width: 100%;
     padding: 10px 35px 10px 15px;
-    border-top-left-radius: 16px;
-    border-bottom-right-radius: 16px;
+    border-radius: 20px;
+    
     border: 1px solid #606060;
     color: #111111;
     font-size: 16px;
@@ -76,6 +76,7 @@ input:focus{
     color: #606060;
     cursor: pointer;
 }
+
 
 .theme-toggle{
     background: none;
@@ -110,7 +111,7 @@ input:focus{
   transition: all 0.3s ease;
 }
 
-/* Animation to close icon */
+
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -207,18 +208,18 @@ input:focus{
   padding: 10px;
 
 }
-/* Left Sidebar */
+
 .left-sidebar {
   flex: 1 1 20%;
   
 }
 
-/* Right Sidebar */
+
 .right-sidebar {
   flex: 1 1 20%;
 }
 
-/* Center Content */
+
 .main-content {
   flex: 1 1 55%;
 }
@@ -248,7 +249,7 @@ input:focus{
   color: #111111;
 }
 
-/* Shared Sidebar Styles */
+
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -301,15 +302,10 @@ padding: 10px;
   border: none;
   cursor: pointer;
 }
-.blog-posts{
-  margin: 20px;
-}
-.blog-posts .btn{
-  margin-top: 10px;
-  cursor: pointer;
-}
+
+
 /* Responsive: Stack Layout */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .main-container {
     flex-direction: column;
   }
@@ -317,10 +313,10 @@ padding: 10px;
   .left-sidebar,
   .right-sidebar,
   .main-content {
-    flex: 1 1 100%;
+   width: 100%;
   }
 }
-/* Footer Base */
+
 footer {
   background-color: #eee;
   color: #000;
@@ -375,10 +371,10 @@ footer .container {
 }
 
 .social-links a:hover {
-  color: #1da1f2; /* Twitter blue or customize */
+  color: #1da1f2; 
 }
 
-/* Copyright */
+
 footer .copyright {
   text-align: center;
   margin-top: 30px;
@@ -390,7 +386,7 @@ footer .copyright {
 
 /* Modal Styles */
 .modal {
-  display: none; /* Hidden by default */
+  display: none; 
   position: fixed;
   z-index: 999;
   left: 0;
@@ -527,3 +523,4 @@ button {
   margin: 10px 0;
   font-weight: bold;
 }
+

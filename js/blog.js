@@ -1,5 +1,5 @@
  document.addEventListener('DOMContentLoaded', function() {
-            // Sample blog posts data (in a real app, you might fetch this from an API or JSON file)
+
             const blogPosts = [
                 {
                     id: 1,
@@ -7,7 +7,7 @@
                     excerpt: "The excitement and challenges of creating my very first HTML page from scratch.",
                     category: "html",
                     date: "May 15, 2024",
-                    image: "https://source.unsplash.com/random/600x400/?html",
+                    /*image: "https://source.unsplash.com/random/600x400/?html",*/
                     content: "content1.html"
                 },                {
                     id: 2,

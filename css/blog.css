@@ -1,6 +1,6 @@
-/* blog.css */
 
-/* Hero section unique to blog.html */
+
+
 .hero-blog {
   background: linear-gradient(135deg, #1e293b, #2d3748);
   color: #ffffff;
@@ -41,7 +41,7 @@
 
 
 
-/* Main Blog Content */
+
 main.container-blog {
     padding: 2rem 0;
     position: relative;
@@ -94,7 +94,83 @@ main.container-blog {
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 2rem;
     margin: 3rem 0;
+    
 }
+.post-card{
+    background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+/* Post Content */
+.post-content {
+  padding: 1.5rem;
+}
+
+.post-content h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #2d3748;
+}
+/* Post Meta (Category & Date) */
+.post-meta {
+  display: flex;
+  justify-content: space-between;
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.post-meta span:first-child {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Category-specific colors */
+.post-card.html .post-meta span:first-child {
+  color: #e34c26; 
+}
+.post-card.css .post-meta span:first-child {
+  color: #c637b3; 
+}
+
+.post-card.js .post-meta span:first-child {
+  color: #e67630; 
+}
+
+.post-card.projects .post-meta span:first-child {
+  color: #6e5494; 
+}
+/* Excerpt text */
+.post-excerpt {
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+/* Read More Link */
+.read-more {
+  display: inline-block;
+  background-color: #222346;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.read-more:hover {
+  background-color: #2563eb;
+}
+
+
+
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {

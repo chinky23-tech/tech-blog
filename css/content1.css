@@ -65,18 +65,7 @@
             margin-top: 0;
             color: #2b6cb0;
         }
-        /*
-        .back-to-blog {
-            display: inline-block;
-            margin-top: 2rem;
-            color: #4299e1;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        .back-to-blog:hover {
-            text-decoration: underline;
-        }*/
+      
         .back-to-blog {
     display: inline-flex;
     align-items: center;

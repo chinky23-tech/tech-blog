@@ -1,3 +1,6 @@
+
+// filter button
+
 const words = ["javascript", "frontend", "developer", "coding", "website", "keyboard"];
 let currentWord = "";
 let scrambled = "";
@@ -75,43 +78,95 @@ function nextWord() {
 window.onload = loadDailyWord;
 
 
-//latest articles
-const posts = [
-  { title: "Post One", excerpt: "This is the first post." },
-  { title: "Post Two", excerpt: "This is the second post." },
-  { title: "Post Three", excerpt: "Another cool blog post." },
-  { title: "Post Four", excerpt: "This one's worth reading!" },
-  { title: "Post Five", excerpt: "Learn something new today." },
-  { title: "Post Six", excerpt: "Frontend tips you’ll love." },
-  { title: "Post Seven", excerpt: "Build smarter websites." },
-  { title: "Post Eight", excerpt: "Design meets logic here." },
-  { title: "Post Nine", excerpt: "Power up your blog now." },
-];
 
-let currentIndex = 0;
-const postsPerLoad = 3;
-const container = document.getElementById("posts-container");
-const loadMoreBtn = document.getElementById("load-more");
+// latest article render
 
-function createPostCard(post) {
-  const card = document.createElement("div");
-  card.className = "post-card";
-  card.innerHTML = `<h3>${post.title}</h3><p>${post.excerpt}</p>`;
-  return card;
-}
+  const posts = [
+    {
+      id: 1,
+      title: "My First HTML Page",
+      excerpt: "The excitement and challenges of creating my very first HTML page from scratch.",
+      category: "html",
+      date: "May 15, 2024",
+      content: "content1.html"
+    },
+    {
+      id: 2,
+      title: "CSS Flexbox Magic",
+      excerpt: "How learning Flexbox transformed my approach to layout design.",
+      category: "css",
+      date: "June 2, 2024",
+      content: "content2.html"
+    },
+    {
+      id: 3,
+      title: "JavaScript Event Listeners",
+      excerpt: "Understanding how to make web pages interactive with event listeners.",
+      category: "js",
+      date: "June 18, 2024",
+      content: "content3.html"
+    },
+    {
+      id: 4,
+      title: "Building My First Project",
+      excerpt: "The journey of planning, coding, and deploying my first complete web project.",
+      category: "projects",
+      date: "July 5, 2024",
+      content: "content4.html"
+    },
+    {
+      id: 5,
+      title: "CSS Grid vs Flexbox",
+      excerpt: "When to use Grid and when to stick with Flexbox for layouts.",
+      category: "css",
+      date: "July 22, 2024",
+      content: "content5.html"
+    },
+    {
+      id: 6,
+      title: "DOM Manipulation Basics",
+      excerpt: "How JavaScript lets you interact with and modify web pages dynamically.",
+      category: "js",
+      date: "August 10, 2024",
+      content: "content6.html"
+    }
+  ];
 
-function loadPosts() {
-  const nextPosts = posts.slice(currentIndex, currentIndex + postsPerLoad);
-  nextPosts.forEach(post => {
-    container.appendChild(createPostCard(post));
-  });
-  currentIndex += postsPerLoad;
-  if (currentIndex >= posts.length) {
-    loadMoreBtn.style.display = "none";
+  let currentIndex = 0;
+  const postsPerLoad = 3;
+  const container = document.getElementById("posts-container");
+  const loadMoreBtn = document.getElementById("load-more");
+
+  function createPostCard(post) {
+    const card = document.createElement("div");
+    card.className = "post-card";
+
+    card.innerHTML = `
+      <a href="${post.content}" class="post-link" target="_blank">
+        <div class="post-content">
+          <span class="post-category">${post.category.toUpperCase()}</span>
+          <h3 class="post-title">${post.title}</h3>
+          <p class="post-excerpt">${post.excerpt}</p>
+          <span class="post-date">${post.date}</span>
+        </div>
+      </a>
+    `;
+    return card;
   }
-}
 
-loadMoreBtn.addEventListener("click", loadPosts);
+  function loadPosts() {
+    const nextPosts = posts.slice(currentIndex, currentIndex + postsPerLoad);
+    nextPosts.forEach(post => {
+      container.appendChild(createPostCard(post));
+    });
+    currentIndex += postsPerLoad;
+    if (currentIndex >= posts.length) {
+      loadMoreBtn.style.display = "none";
+    }
+  }
 
-// Load initial posts
-window.onload = loadPosts;
+  loadMoreBtn.addEventListener("click", loadPosts);
+
+  // Load initial posts
+  window.addEventListener("DOMContentLoaded", loadPosts);
+
