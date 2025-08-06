@@ -7,7 +7,7 @@
                     excerpt: "The excitement and challenges of creating my very first HTML page from scratch.",
                     category: "html",
                     date: "May 15, 2024",
-                    /*image: "https://source.unsplash.com/random/600x400/?html",*/
+                    
                     content: "content1.html"
                 },                {
                     id: 2,
@@ -15,7 +15,7 @@
                     excerpt: "How learning Flexbox transformed my approach to layout design.",
                     category: "css",
                     date: "June 2, 2024",
-                    image: "https://source.unsplash.com/random/600x400/?css",
+                   
                     content: "content2.html"
                 },{
                     id: 3,
@@ -23,7 +23,7 @@
                     excerpt: "Understanding how to make web pages interactive with event listeners.",
                     category: "js",
                     date: "June 18, 2024",
-                    image: "https://source.unsplash.com/random/600x400/?javascript",
+                    
                     content: "content3.html"
                 },
                 {
@@ -32,7 +32,7 @@
                     excerpt: "The journey of planning, coding, and deploying my first complete web project.",
                     category: "projects",
                     date: "July 5, 2024",
-                    image: "https://source.unsplash.com/random/600x400/?webdevelopment",
+                    
                     content: "content4.html"
                 },
                 {
@@ -41,7 +41,7 @@
                     excerpt: "When to use Grid and when to stick with Flexbox for layouts.",
                     category: "css",
                     date: "July 22, 2024",
-                    image: "https://source.unsplash.com/random/600x400/?webdesign",
+                  
                     content: "content5.html"
                 },
 {
@@ -50,7 +50,7 @@
                     excerpt: "How JavaScript lets you interact with and modify web pages dynamically.",
                     category: "js",
                     date: "August 10, 2024",
-                    image: "https://source.unsplash.com/random/600x400/?code",
+              
                     content: "content6.html"
                 }
             ];

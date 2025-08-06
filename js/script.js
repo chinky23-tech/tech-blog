@@ -31,19 +31,7 @@ toggleButtons.forEach(button => {
 
 
 
-  // Open modal (example trigger)
-  // document.getElementById('post-modal').style.display = 'block';
-
-  // Close modal
-  document.querySelector('.close-modal').onclick = () => {
-    document.getElementById('post-modal').style.display = 'none';
-  };
-
-  // Close when clicking outside modal content
-  window.onclick = (e) => {
-    const modal = document.getElementById('post-modal');
-    if (e.target === modal) modal.style.display = 'none';
-  };
+  
 
 // rotating tips 
   const tips = [
@@ -66,7 +54,7 @@ toggleButtons.forEach(button => {
   // Show tip on page load
   window.addEventListener("DOMContentLoaded", showRandomTip);
 
-setInterval(showRandomTip, 10000); // 10,000 ms = 10 seconds
+setInterval(showRandomTip, 10000);
 
 
 //fun fact
@@ -84,7 +72,7 @@ function showRandomFact() {
   document.getElementById("tech-fact").innerText = facts[index];
 }
 showRandomFact();
-setInterval(showRandomFact, 15000); // Change every 15 sec (optional)
+setInterval(showRandomFact, 15000); 
 
 //tech poll
 function submitPoll() {
@@ -104,4 +92,4 @@ function submitPoll() {
 }
 
 
-// nav searchbar
+
