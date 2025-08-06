@@ -159,3 +159,61 @@
     background-color:  #c530dc;
     color: white;
 }
+
+
+
+
+
+@media(max-width: 768px){
+           .post-header.dom-header{
+            padding: 2rem 0rem;
+           }
+           .post-title{
+            font-size: 1.3rem;
+           }
+           .post-category{
+            font-size: 0.7rem;
+           }
+           .post-date{
+            font-size: 0.6rem;
+           }
+           
+}
+@media (max-width: 768px) {
+    .code-example {
+        padding: 1rem;
+        margin: 1.5rem 0;
+    }
+    
+    .code-example h3 {
+        font-size: 1.2rem;
+    }
+    
+    .code-example code {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+    
+    pre {
+        padding: 0.75rem;
+    }
+    .dom-table{
+        font-size: 0.5rem;
+    }
+}
+@media (max-width: 480px) {
+    .code-example {
+        border-left-width: 3px;
+        padding: 0.75rem;
+    }
+    
+    .code-example code {
+        font-size: 0.75rem;
+    }
+    
+    /* Word wrapping for very small screens */
+    .code-example pre {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+}

@@ -114,19 +114,21 @@
         <div class="code-explanation">
             <h3>JavaScript Logic</h3>
             <p>The core functionality:</p>
-            <pre><code>function showToast(message, bgColor) {
-    const toast = document.getElementById('toast-overlay');
-    toast.textContent = message;
-    toast.style.backgroundColor = bgColor;
-    toast.classList.add('toast-show');
-    
-    setTimeout(() => {
-        toast.classList.remove('toast-show');
+            <pre><code>
+ function showToast(message, bgColor) {
+const toast = document.getElementById('toast-overlay');
+toast.textContent = message;
+toast.style.backgroundColor = bgColor;
+ toast.classList.add('toast-show');
+
+ setTimeout(() => {
+toast.classList.remove('toast-show');
     }, 3000);
 }
 document.getElementById('btn1').addEventListener('click', () => {
-    showToast('Success! Action completed', '#10b981');
-});</code></pre>
+showToast('Success! Action completed', '#10b981');
+});
+</code></pre>
         </div>
         
         <h2>What I Learned</h2>

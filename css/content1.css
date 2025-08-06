@@ -1,6 +1,6 @@
 .post-header {
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            padding: 3rem 0;
+            padding: 4rem 0;
             margin-bottom: 2rem;
             border-bottom: 1px solid #e1e4e8;
             text-align: center;
@@ -23,7 +23,7 @@
         .post-category {
             background-color: #e53e3e;
             color: white;
-            padding: 0.25rem 0.75rem;
+            padding: 0.40rem 0.45rem 0.35rem 0.45rem;
             border-radius: 9999px;
             font-size: 0.85rem;
             font-weight: 500;
@@ -83,4 +83,15 @@
 .back-to-blog:hover {
     background-color: #4299e1;
     color: white;
+}
+@media(max-width: 768px){
+.post-title{
+    font-size: 1.5rem;
+}
+.post-header{
+    font-size: 0.8rem;
+}
+.post-category{
+    font-size: 0.6rem;
+}
 }

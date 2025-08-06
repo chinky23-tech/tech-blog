@@ -184,6 +184,7 @@ main.container-blog {
     
     .hero-blog p {
         font-size: 1.1rem;
+        line-height: 1.2;
     }
     
     .category-filter {

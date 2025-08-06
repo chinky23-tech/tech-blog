@@ -157,3 +157,38 @@
     background-color: #fb6db6;
     color: #ffffff;
 }
+@media (max-width: 768px) {
+    .code-explanation {
+        padding: 1rem;
+        margin: 1.5rem 0;
+    }
+    
+    .code-explanation h3 {
+        font-size: 1.2rem;
+    }
+    
+    .code-explanation code {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+    
+    pre {
+        padding: 0.75rem;
+    }
+}
+@media (max-width: 480px) {
+    .code-explanation {
+        border-left-width: 3px;
+        padding: 0.75rem;
+    }
+    
+    .code-explanation code {
+        font-size: 0.75rem;
+    }
+    
+    /* Word wrapping for very small screens */
+    .code-explanation pre {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+}
