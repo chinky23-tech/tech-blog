@@ -346,6 +346,7 @@ footer .container {
   margin-bottom: 15px;
   font-size: 18px;
   color: #000;
+  text-align: center;
 }
 
 .footer-section p,
@@ -354,6 +355,7 @@ footer .container {
   font-size: 14px;
   color: #000;
   text-decoration: none;
+  text-align: center;
 }
 
 
@@ -364,11 +366,13 @@ footer .container {
 }
 
 .social-links a {
-  margin-right: 10px;
+display: block;
+
   font-size: 18px;
   color: #000;
   transition: color 0.3s;
-}
+  }
+
 
 .social-links a:hover {
   color: #1da1f2; 
